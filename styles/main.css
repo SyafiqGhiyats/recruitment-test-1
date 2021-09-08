@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: #e0e7ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box {
+  position: relative;
+  width: 80%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 50px 40px -45px rgba(21, 29, 48, 0.8);
+          box-shadow: 0px 50px 40px -45px rgba(21, 29, 48, 0.8);
+  background-color: #151d30;
+}
+
+.btn {
+  cursor: pointer;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.btn-icon {
+  background: #202c49;
+  -webkit-box-sizing: unset;
+          box-sizing: unset;
+  border-radius: inherit;
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  left: 20px;
+  width: 25px;
+  padding: 0.3rem;
+}
+
+.first-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  height: 100% !important;
+  padding: 7rem;
+}
+
+.first-section h1 {
+  font-size: 2rem;
+  color: white;
+}
+
+.first-section > p {
+  font-size: 0.82rem;
+  color: #8fa2ce;
+}
+
+.first-section .input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.first-section .input-box input {
+  width: 100%;
+  padding: 1rem;
+  background: #202c49;
+  padding-left: 3rem;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-radius: 1.2rem;
+}
+
+.first-section .input-box input::-webkit-input-placeholder {
+  color: #c5cee5;
+}
+
+.first-section .input-box input:-ms-input-placeholder {
+  color: #c5cee5;
+}
+
+.first-section .input-box input::-ms-input-placeholder {
+  color: #c5cee5;
+}
+
+.first-section .input-box input::placeholder {
+  color: #c5cee5;
+}
+
+.first-section .input-box input:focus {
+  outline: none;
+}
+
+.first-section .input-box .input-icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 13px;
+  width: 25px;
+  color: #c5cee5;
+}
+
+.first-section .projects {
+  color: #a1b1d6;
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.first-section .projects h3 {
+  color: white;
+  display: inline;
+}
+
+.first-section .projects .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-preferred-size: calc(100% / 3);
+      flex-basis: calc(100% / 3);
+}
+
+.first-section .projects .project-content {
+  padding: 1rem 0;
+  margin: 0 0.1px;
+}
+
+.first-section .projects .project-content:nth-child(2) .square {
+  top: -40px;
+  left: -10px;
+}
+
+.first-section .projects .project-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  color: white;
+  overflow: hidden;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#f093fb), to(#f5576c));
+  background-image: linear-gradient(to bottom left, #f093fb 0%, #f5576c 100%);
+}
+
+.first-section .projects .project-box span {
+  z-index: 2;
+}
+
+.first-section .projects .project-label {
+  text-align: center;
+  font-size: 0.8rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.first-section .projects .project .square {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  z-index: 1;
+  border: 0.8rem solid rgba(255, 255, 255, 0.2);
+}
+
+.first-section .projects .project .circle {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  z-index: 1;
+  border: 0.8rem solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.second-section {
+  background: white;
+  width: 50%;
+  margin: 10px;
+  border-radius: inherit;
+}
+/*# sourceMappingURL=main.css.map */
