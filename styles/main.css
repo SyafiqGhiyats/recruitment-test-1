@@ -67,8 +67,8 @@ hr {
 
 .box {
   position: relative;
-  width: 80%;
   min-height: 90%;
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,6 +77,7 @@ hr {
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 1rem;
+  margin: 20px 0;
   -webkit-box-shadow: 0px 50px 40px -45px rgba(21, 29, 48, 0.8);
           box-shadow: 0px 50px 40px -45px rgba(21, 29, 48, 0.8);
   background-color: #151d30;
@@ -88,6 +89,12 @@ hr {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+}
+
+@media (min-width: 767px) {
+  .box {
+    width: 80%;
   }
 }
 
@@ -159,10 +166,18 @@ hr {
 
 .first-section .dot-img {
   position: absolute;
-  bottom: -7rem;
-  left: 6rem;
   width: 10rem;
   opacity: 0.4;
+}
+
+.first-section .dot-img:first-child {
+  bottom: -10rem;
+  left: 2rem;
+}
+
+.first-section .dot-img:nth-child(2) {
+  right: -8rem;
+  top: -8rem;
 }
 
 .first-section .input-box {

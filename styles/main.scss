@@ -53,19 +53,20 @@ hr {
 }
 .box {
     position: relative;
-    width: 80%;
     min-height: 90%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
+    margin: 20px 0;
     box-shadow: 0px 50px 40px -45px rgba($bg-box, 0.8);
     background-color: $bg-box;
     @include breakpoint("medium") {
         flex-direction: row;
     }
-    // @include breakpoint("medium") {
-    //     flex-direction: row;
-    // }
+    @include breakpoint("small") {
+        width: 80%;
+    }
 }
 .btn {
     position: relative;
@@ -110,10 +111,16 @@ hr {
     }
     .dot-img {
         position: absolute;
-        bottom: -7rem;
-        left: 6rem;
         width: 10rem;
         opacity: 0.4;
+        &:first-child {
+            bottom: -10rem;
+            left: 2rem;
+        }
+        &:nth-child(2) {
+            right: -8rem;
+            top: -8rem;
+        }
     }
     .input-box {
         position: relative;
