@@ -36,7 +36,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 10px;
+  overflow: hidden;
+  border-radius: 1rem;
   -webkit-box-shadow: 0px 50px 40px -45px rgba(21, 29, 48, 0.8);
           box-shadow: 0px 50px 40px -45px rgba(21, 29, 48, 0.8);
   background-color: #151d30;
@@ -90,6 +91,14 @@ body {
 .first-section > p {
   font-size: 0.82rem;
   color: #8fa2ce;
+}
+
+.first-section .dot-img {
+  position: absolute;
+  bottom: -7rem;
+  left: 6rem;
+  width: 10rem;
+  opacity: 0.4;
 }
 
 .first-section .input-box {
@@ -168,9 +177,89 @@ body {
   margin: 0 0.1px;
 }
 
+.first-section .projects .project-content:nth-child(1) .project-box {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#ed66c4), to(#f15589)) !important;
+  background-image: linear-gradient(to bottom left, #ed66c4, #f15589) !important;
+}
+
+.first-section .projects .project-content:nth-child(2) .project-box {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#397ddc), to(#57cfa7)) !important;
+  background-image: linear-gradient(to bottom left, #397ddc, #57cfa7) !important;
+}
+
+.first-section .projects .project-content:nth-child(3) .project-box {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#ad60ce), to(#7352be)) !important;
+  background-image: linear-gradient(to bottom left, #ad60ce, #7352be) !important;
+}
+
+.first-section .projects .project-content:nth-child(4) .project-box {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#36b0f1), to(#7867f0)) !important;
+  background-image: linear-gradient(to bottom left, #36b0f1, #7867f0) !important;
+}
+
+.first-section .projects .project-content:nth-child(5) .project-box {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#ee7263), to(#f7bd73)) !important;
+  background-image: linear-gradient(to bottom left, #ee7263, #f7bd73) !important;
+}
+
+.first-section .projects .project-content:nth-child(1) .square {
+  left: 65%;
+  top: -3.2rem;
+}
+
 .first-section .projects .project-content:nth-child(2) .square {
-  top: -40px;
-  left: -10px;
+  left: -2.8rem;
+  top: 65%;
+}
+
+.first-section .projects .project-content:nth-child(3) .square {
+  left: -3.4rem;
+  top: -3.4rem;
+}
+
+.first-section .projects .project-content:nth-child(4) .square {
+  left: 67%;
+  top: 67%;
+}
+
+.first-section .projects .project-content:nth-child(5) .square {
+  left: -1rem;
+  top: -3.5rem;
+}
+
+.first-section .projects .project-content:nth-child(1) .circle {
+  left: -2.2rem;
+  top: 55%;
+}
+
+.first-section .projects .project-content:nth-child(2) .circle {
+  left: 40%;
+  top: -2rem;
+}
+
+.first-section .projects .project-content:nth-child(3) .circle {
+  left: 0;
+  top: 70%;
+}
+
+.first-section .projects .project-content:nth-child(4) .circle {
+  left: -2.7rem;
+  top: 0;
+}
+
+.first-section .projects .project-content:nth-child(5) .circle {
+  left: 50%;
+  top: 60%;
+}
+
+.first-section .projects .project .outline {
+  padding: 0.25rem;
+  border-radius: 1rem;
+  border: 2px solid cyan;
+}
+
+.first-section .projects .project .outline ~ .project-label {
+  margin-top: 0.5rem;
 }
 
 .first-section .projects .project-box {
@@ -188,36 +277,59 @@ body {
   height: 5rem;
   border-radius: 1rem;
   color: white;
-  overflow: hidden;
-  background-image: -webkit-gradient(linear, right top, left bottom, from(#f093fb), to(#f5576c));
-  background-image: linear-gradient(to bottom left, #f093fb 0%, #f5576c 100%);
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  background: #3b4055;
 }
 
 .first-section .projects .project-box span {
   z-index: 2;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+.first-section .projects .project-box.badge::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  border: 3.8px solid #151d30;
 }
 
 .first-section .projects .project-label {
   text-align: center;
   font-size: 0.8rem;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
+}
+
+.first-section .projects .project .shape {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
 }
 
 .first-section .projects .project .square {
   position: absolute;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   z-index: 1;
-  border: 0.8rem solid rgba(255, 255, 255, 0.2);
+  border: 1rem solid rgba(255, 255, 255, 0.1);
 }
 
 .first-section .projects .project .circle {
   position: absolute;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   z-index: 1;
-  border: 0.8rem solid rgba(255, 255, 255, 0.2);
+  border: 1rem solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
 
@@ -225,6 +337,73 @@ body {
   background: white;
   width: 50%;
   margin: 10px;
+  padding: 4rem;
   border-radius: inherit;
+}
+
+.second-section h1 {
+  font-size: 1.6rem;
+}
+
+.second-section p {
+  font-size: 0.8rem;
+  color: #a1a1aa;
+}
+
+.second-section .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.second-section .avatar-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.second-section .avatar-group .avatar {
+  background: #14b8a6;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border: 2px solid white;
+  border-radius: 50%;
+  z-index: unset;
+}
+
+.second-section .avatar-group .avatar:nth-child(1) {
+  z-index: 3;
+}
+
+.second-section .avatar-group .avatar:nth-child(2) {
+  z-index: 2;
+}
+
+.second-section .avatar-group .avatar:nth-child(3) {
+  z-index: 1;
+}
+
+.second-section .avatar-group .avatar:not(:first-child) {
+  margin-left: -10px;
+}
+
+.second-section .avatar-group .avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.second-section .avatar-group .avatar-plus {
+  color: #c9c9ce;
+  width: 28px;
+  height: 28px;
 }
 /*# sourceMappingURL=main.css.map */
