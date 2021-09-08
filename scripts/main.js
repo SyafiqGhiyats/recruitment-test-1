@@ -3,11 +3,11 @@ import { status, words } from "./words.js";
 const button = document.querySelector('#add')
 const checklistEl = document.querySelector('.checklist')
 function genRandomNumber(max) {
-    return Math.ceil(Math.random() * max)
+    return Math.floor(Math.random() * max)
 }
 button.onclick = (e) => {
     const text = words[genRandomNumber(words.length)]
-    const status = status[genRandomNumber(status.length)]
+    const statusTxt = status[genRandomNumber(status.length)]
 
     const item = document.createElement('div')
     item.className = "checklist-item"
@@ -25,7 +25,7 @@ button.onclick = (e) => {
 
     let colorStatus = "";
     const btnStatus = document.createElement('button')
-    switch (status) {
+    switch (statusTxt) {
         case "Approved":
             colorStatus = "text-primary"
             break;
@@ -36,5 +36,11 @@ button.onclick = (e) => {
             break;
     }
     btnStatus.className = `btn btn-status ${colorStatus}`
-    console.log(status, text, colorStatus)
+    btnStatus.innerText = statusTxt
+
+    label.appendChild(checkbox)
+    label.appendChild(checkmark)
+    item.appendChild(label)
+    item.appendChild(btnStatus)
+    checklistEl.appendChild(item)
 }

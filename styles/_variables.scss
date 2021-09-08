@@ -8,3 +8,14 @@ $secondary: #a1a1aa;
 $gradient: ((#ed66c4, #f15589), (#397ddc, #57cfa7), (#ad60ce, #7352be), (#36b0f1, #7867f0), (#ee7263, #f7bd73));
 $square-position: ((65%, -3.2rem), (-2.8rem, 65%), (-3.4rem, -3.4rem), (67%, 67%), (-1rem, -3.5rem));
 $circle-position: ((-2.2rem, 55%), (40%, -2rem), (0, 70%), (-2.7rem, 0), (50%, 60%));
+$breakpoints: (
+    "small": (
+        min-width: 767px,
+    ),
+    "medium": (
+        min-width: 992px,
+    ),
+    "large": (
+        min-width: 1200px,
+    ),
+) !default;
