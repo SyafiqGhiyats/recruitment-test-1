@@ -13,6 +13,37 @@ body {
     margin: 0;
     font-family: "Poppins", sans-serif;
 }
+hr {
+    background-color: lighten($secondary, 30);
+    height: 1px;
+    border: 0;
+}
+.text-primary {
+    color: $primary !important;
+}
+.text-secondary {
+    color: $secondary !important;
+}
+.text-info {
+    color: $info !important;
+}
+.text-danger {
+    color: $danger !important;
+}
+
+.bg-primary {
+    background: $primary !important;
+}
+.bg-secondary {
+    background: $secondary !important;
+}
+.bg-info {
+    background: $info !important;
+}
+.bg-danger {
+    background: $danger !important;
+}
+
 .container {
     height: 100%;
     width: 100%;
@@ -30,13 +61,17 @@ body {
     background-color: $bg-box;
 }
 .btn {
+    position: relative;
     cursor: pointer;
     color: white;
-    border-radius: 0.5rem;
+    border: none;
+    &:focus {
+        outline: none;
+    }
     &-icon {
         background: $bg-secondary;
         box-sizing: unset;
-        border-radius: inherit;
+        border-radius: 0.5rem;
         position: absolute;
         cursor: pointer;
         top: 20px;
@@ -209,6 +244,7 @@ body {
     }
 }
 .second-section {
+    position: relative;
     background: white;
     width: 50%;
     margin: 10px;
@@ -260,5 +296,110 @@ body {
             width: 28px;
             height: 28px;
         }
+    }
+    .list-container {
+        margin-bottom: 0.5rem;
+        margin-top: 3rem;
+    }
+    .list-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & svg {
+            width: 2rem;
+            color: $secondary;
+        }
+    }
+    .checklist {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5rem;
+        &-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 7px 0;
+            .checkbox-container {
+                display: block;
+                position: relative;
+                padding-left: 35px;
+                cursor: pointer;
+                flex-grow: 1;
+                font-size: 0.85rem;
+                color: $secondary;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                & input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                    &:checked ~ .checkmark {
+                        background-color: $primary;
+                        &:after {
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                border: thin solid $secondary;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                }
+                &:after {
+                    left: 6px;
+                    top: 2px;
+                    width: 4px;
+                    height: 9px;
+                    border: solid white;
+                    border-width: 0 3px 3px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+            .btn-status {
+                padding: 5px 15px;
+                width: 20%;
+                white-space: nowrap;
+                background: transparent;
+                color: $info;
+                border-radius: 1rem;
+                font-size: 0.7rem;
+                &::before {
+                    content: "";
+                    border-radius: inherit;
+                    position: absolute;
+                    inset: 0;
+                    background: currentColor;
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+    .btn-fixed {
+        position: absolute;
+        display: inline-flex;
+        bottom: 20px;
+        right: 20px;
+        background: #6366f1;
+        padding: 10px;
+        border-radius: 1rem;
+        box-shadow: -6px 8px 30px 3px rgba(#6366f1, 0.8);
+        -webkit-box-shadow: -6px 8px 30px 3px rgba(#6366f1, 0.8);
+        -moz-box-shadow: -6px 8px 30px 3px rgba(#6366f1, 0.8);
     }
 }
